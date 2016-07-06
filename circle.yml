@@ -1,10 +1,15 @@
+general:
+  artifacts:
+    - *
+
 dependencies:
   pre:
     - wget https://releases.hashicorp.com/terraform/0.6.16/terraform_0.6.16_linux_amd64.zip
     - unzip terraform_0.6.16_linux_amd64.zip
-
+    
 test:
   override:
+    - ls -lrt
     - ./terraform_0.6.16_linux_amd64/terraform plan -out=simple/main.tf
 
 deployment:
