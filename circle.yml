@@ -1,7 +1,7 @@
 dependencies:
   pre:
-    - wget https://dl.bintray.com/mitchellh/terraform/terraform_0.6.3_linux_amd64.zip
-    - unzip terraform_0.6.3_linux_amd64.zip
+    - wget https://releases.hashicorp.com/terraform/0.6.16/terraform_0.6.16_linux_amd64.zip
+    - unzip terraform_0.6.16_linux_amd64.zip
 
 test:
   override:
