@@ -6,7 +6,7 @@ dependencies:
 test:
   override:
     - ls -lrt
-    - ./terraform plan -out=simple/main.tf
+    - ./terraform plan simple/main.tf
 
 deployment:
   production:
