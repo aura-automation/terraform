@@ -1,0 +1,14 @@
+dependencies:
+  pre:
+    - wget https://dl.bintray.com/mitchellh/terraform/terraform_0.6.3_linux_amd64.zip
+    - unzip terraform_0.6.3_linux_amd64.zip
+
+test:
+  override:
+    - ./terraform plan -out=simple/main.tf
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./terraform apply simple/main.tf
