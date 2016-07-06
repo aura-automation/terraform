@@ -5,10 +5,10 @@ dependencies:
 
 test:
   override:
-    - ./terraform plan -out=simple/main.tf
+    - ./terraform_0.6.16_linux_amd64/terraform plan -out=simple/main.tf
 
 deployment:
   production:
     branch: master
     commands:
-      - ./terraform apply simple/main.tf
+      - ./terraform_0.6.16_linux_amd64/terraform apply simple/main.tf
