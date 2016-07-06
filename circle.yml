@@ -5,11 +5,12 @@ dependencies:
     
 test:
   override:
+    - ./terraform remote config -backend=S3 -backend-config="bucket=$BUCKET" -backend-config="key=terraform.tfstate" -backend-config="region=eu-west-1"
     - ls -lrt
-    - ./terraform plan simple/main.tf
-
+    - ./terraform plan simple
 deployment:
   production:
     branch: master
     commands:
-      - ./terraform apply simple/main.tf
+      - ./terraform apply simple
+      - ./terraform remote push

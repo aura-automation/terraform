@@ -18,7 +18,7 @@ sudo yum -y install mysql mysql-server
 sudo /sbin/service mysqld start
 mysqladmin -u root password passw0rd
 aws s3 cp s3://jk2-app/sql/create_database.sql /tmp
-mysql -u root -ppassw0rd < /tmp/create_database.sql
+mysql -u root -ppassw0rd < /tmp/create_database.sql 
 
 echo "Sync war files "
 
